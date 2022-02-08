@@ -11,6 +11,7 @@ while True:
         if any(int(j)==j for j in square_of_list):
             pass
         else:
-            print(i,time()-t1)
+            print(i)
+            print(f'Process completed in {time()-t1}s')
             break
     i += 2

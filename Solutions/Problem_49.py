@@ -15,5 +15,6 @@ for prime in prime_list:
         for i in range(len(L)):
             for j in range(i+1,len(L)):
                 if 2*(L[j])-L[i] in L:
-                    print(L[i],L[j],2*L[j]-L[i],time()-t1)
+                    print(L[i],L[j],2*L[j]-L[i])
+                    print(f'Process completed in {time()-t1}s')
                     raise SystemExit

@@ -1,4 +1,7 @@
+from time import time
 from fractions import Fraction
+
+t1=time()
 L=[Fraction(3/2)]
 def approx(x):
     if x==0:
@@ -13,3 +16,4 @@ for i in range(1000):
     if len(str(x.numerator)) > len(str(x.denominator)):
         ans += 1
 print(ans)
+print(f'Process completed in {time()-t1}s')

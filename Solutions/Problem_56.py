@@ -1,3 +1,6 @@
+from time import time
+
+t1=time()
 current = None
 high = 0
 for a in range(1,100):
@@ -6,3 +9,4 @@ for a in range(1,100):
         if current>high:
             high = current
 print(high)
+print(f'Process completed in {time()-t1}s')

@@ -1,3 +1,5 @@
+from time import time
+
 def palindrome_check(x: int) -> bool:
     return str(x)==str(x)[::-1]
 def Lychrel_Check(x):
@@ -12,4 +14,6 @@ def Lychrel_Check(x):
         return True
     return False
 
+t1=time()
 print(len([i for i in range(1,10001) if Lychrel_Check(i)]))
+print(f'Process completed in {time()-t1}s')
