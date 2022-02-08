@@ -5,7 +5,7 @@ from time import time
 t1=time()
 l=1_500_000
 # sides: c=m^2+n^2,a=m^2-n^2,b=2mn
-# perimter = 2m^2+2mn = 2m(m+n)
+# perimeter = 2m^2+2mn = 2m(m+n)
 # m^2+n^2<l,m>n  => m<sqrt(l/2)
 perimeter_set=set()
 to_remove=set()
