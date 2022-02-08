@@ -26,4 +26,5 @@ while ans>0.1:
             prime_nums.add(a4)
     ans=len(prime_nums)/(4*n+1)
     n+=1
-print(2*n-1,time()-t1)
+print(2*n-1)
+print(f'Process completed in {time()-t1}s')

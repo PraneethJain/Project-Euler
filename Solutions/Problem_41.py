@@ -24,4 +24,4 @@ for num in all_list:
     if primecheck(num):
         print(num)
         break
-print(time()-t1)
+print(f'Process completed in {time()-t1}s')

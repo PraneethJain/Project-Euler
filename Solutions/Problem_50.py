@@ -18,4 +18,4 @@ for i,_ in enumerate(prime_list):
         else:
             break
 print(primes[num_of_primes.index(max(num_of_primes))])
-print(f'Process Completeted in {t()-t1}s')
+print(f'Process completeted in {t()-t1}s')

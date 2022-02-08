@@ -15,4 +15,5 @@ for num in num_list:
         if all(int(num[i:i+3])%prime_list[i-1]==0 for i in range(1,8)):
                 ans += int(num)
 
-print(ans,time()-t1)
+print(ans)
+print(f'Process completed in {time()-t1}s')

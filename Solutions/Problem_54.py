@@ -111,7 +111,7 @@ def checkwin(h):
 
 
 t1=time()
-with open(r'C:\Users\prane\Desktop\Stuff\Python\Files_Input\p054_poker.txt') as f:
+with open(r'C:\Users\prane\Documents\Stuff\Python\Files_Input\p054_poker.txt') as f:
     file=f.read()
 file=file.split('\n')
 file.pop()
@@ -120,4 +120,5 @@ for h in file:
     if checkwin(h):
         ans +=1
 
-print(f'Player 1 wins {ans} times.\nTime taken was {time()-t1}')
+print(f'Player 1 wins {ans} times')
+print(f'Process completed in {time()-t1}s')

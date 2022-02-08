@@ -17,4 +17,4 @@ for p in p_list:
         high = current
         ans = p
 print(f'p={int(ans)} has {high} solutions')
-print(time()-t1)
+print(f'Process completed in {time()-t1}s')
