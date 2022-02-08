@@ -14,12 +14,13 @@ for m in range(2,int(sqrt(l/2))+1):
         if gcd(m,n)==1 and (m+n)%2==1:
             perimeter=2*m*(m+n)
             i=1
-            while perimeter*i<=l:
-                if perimeter*i in perimeter_set:
-                    to_remove.add(perimeter*i)
+            new_per = perimeter
+            while new_per<=l:
+                if new_per in perimeter_set:
+                    to_remove.add(new_per)
                 else:
-                    perimeter_set.add(perimeter*i)
-                i+=1
+                    perimeter_set.add(new_per)
+                new_per += perimeter
 ans_set = perimeter_set.difference(to_remove)
 print(len(ans_set))
 print(f'Process completed in {time()-t1}s')
