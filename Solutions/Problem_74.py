@@ -22,4 +22,3 @@ for num in range(10**6):
         ans+=1
 print(ans)
 print(f'Process completed in {time()-t1}s')
-# print(dic)
