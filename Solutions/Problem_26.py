@@ -1,13 +1,7 @@
 from math import *
-from time import *
+from time import time
+from prime import primecheck
 
-def primecheck(x):
-    if x == 1:
-        return False
-    for i in range(2,floor(sqrt(x))+1):
-        if x%i == 0:
-            return False
-    return True
 
 def cycle_len(x):
     i=1
@@ -26,4 +20,5 @@ for prime in prime_list:
     if current > high:
         high = current
         answer = prime
-print(f'Highest length is {high} of {answer},\nTime taken is {time()-t1}s')
+print(f'Highest length is {high} of {answer}')
+print(f'Process completed in {time()-t1}s')

@@ -1,16 +1,17 @@
-from math import gcd
-numerator=1
-denominator=1
-for i in range(10,100):
-    for j in range(i+1,100):
-        if i%10==0 and j%10==0:
-            continue
-        elif i%11==0 and j%11==0:
-            continue
-        else:
-            if int(str(j)[1]) != 0:
-                if int(str(i)[1])==int(str(j)[0]):
-                    if i/j==int(str(i)[0])/int(str(j)[1]):
-                            numerator *= i
-                            denominator *= j
-print(denominator//gcd(numerator,denominator))
+from fractions import Fraction as f
+from time import time
+from math import prod
+
+t1=time()
+L=set()
+for den in range(10,100):
+    for num in range(10,den):
+        if den%11 != 0 and num%11 !=0 and str(num)[1]==str(den)[0]:
+            try:
+                if f(num,den)==f(int(str(num)[0]),int(str(den)[1])):
+                    L.add(f(num,den))
+            except:
+                pass
+
+print(prod(L))
+print(f'Process completed in {time()-t1}s')

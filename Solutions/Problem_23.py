@@ -1,20 +1,11 @@
-import math
-import time
+from prime import factors
+from time import time
 
 
 def abundant(x):
-    ans = []
-    for i in range(1,math.floor(math.sqrt(x))+1):
-        if x % i == 0:
-            ans.append(i)
-            if i !=1:
-                ans.append(int(x/i))
-    if sum(set(ans)) > x:
-        return True
-    else:
-        return False
+    return sum(factors(x))>2*x
 
-t1 = time.time()
+t1 = time()
 abundant_numbers=[i for i in range(12,28124) if abundant(i)]
 can_sum=set()
 for i in abundant_numbers:
@@ -23,6 +14,6 @@ for i in abundant_numbers:
             break
         else:
             can_sum.add(i+j)
-cant_sum=[i for i in range(1,28124) if i not in can_sum]
-print(cant_sum)
-print(sum(cant_sum),time.time()-t1)
+
+print(int(28123*28124/2)-sum(can_sum))
+print(f'Process completed in {time()-t1}s')

@@ -1,23 +1,6 @@
-##To find the nth prime number
+from prime import primelist
+from time import time
 
-n = int(input("Enter the prime number number: "))
-prime = [2,3]
-i=3
-if 0<n<3:
-    print(prime[n-1])
-elif n>2:
-    while True:
-        i+=1
-        status=True
-        for j in range(2,int(i/2)+1):
-            if (i%j==0):
-                status = False
-                break
-        if(status==True):
-            prime.append(i)
-        if(len(prime)==n):
-            break
-    print(prime[n-1])
-else:
-    print("Bad Input")
-input('Press ENTER to exit')
+t1=time()
+print(primelist(200000)[10000])
+print(f'Process completed in {time()-t1}s')

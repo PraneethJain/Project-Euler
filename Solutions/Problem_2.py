@@ -1,19 +1,11 @@
-import math
+from time import time
 
-x = int(input("Enter the upper limit: "))
-list = [1,2]
-for i in range(2,100000000):
-    if list[i-1]<x:
-        list.append(list[i-1]+list[i-2])
-    else:
-        list.pop(i-1)
-        break
-for x in list:
-    if x%2!=0:
-        list.remove(x)
-print(list)
-sum = 0
-for i in range(0,math.ceil(len(list)/2)):
-    sum = sum + list[2*i]
-print(sum)
-input('Press ENTER to exit')
+t1=time()
+fib = [1,1]
+i=0
+while fib[-1]<4*(10**6):
+    fib.append(fib[i]+fib[i+1])
+    i+=1
+fib_even=[i for i in fib if i%2==0]
+print(sum(fib_even))
+print(f'Process completed in {time()-t1}s')

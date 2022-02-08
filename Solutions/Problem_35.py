@@ -1,12 +1,7 @@
-import math
+from prime import primecheck
 from itertools import permutations as p
+from time import time
 
-
-def primecheck(x):
-    for i in range(2,math.floor(math.sqrt(x))+1):
-        if x%i==0:
-            return False
-    return True
 
 def rotations(x):
     rotations=set()
@@ -15,6 +10,7 @@ def rotations(x):
     return rotations
 
 
+t1=time()
 circular= []
 primelist = set([i for i in range(2,1000000) if primecheck(i)])
 for prime in primelist:
@@ -23,3 +19,4 @@ for prime in primelist:
     if permuted.issubset(primelist):
         circular.append(prime)
 print(len(set(circular)))
+print(f'Process completed in {time()-t1}s')

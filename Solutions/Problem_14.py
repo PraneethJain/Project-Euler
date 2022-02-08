@@ -1,4 +1,5 @@
-import time
+from time import time
+
 def collatz(x):
     length = 1
     while x!=1:
@@ -11,11 +12,12 @@ def collatz(x):
     return length
 
 
-t1 = time.time()
-best=1
-for i in range(2,1000001):
-    now = collatz(i)
-    if now>best:
-        best=now
+t1 = time()
+high=1
+for i in range(500001,1000001,2):
+    current = collatz(i)
+    if current>high:
+        high=current
         answer = i
-print(answer,time.time()-t1)
+print(answer)
+print(f'Process completed in {time()-t1}s')
