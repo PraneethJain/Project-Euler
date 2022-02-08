@@ -1,5 +1,6 @@
-import time
-t1 = time.time()
+from time import time
+
+t1 = time()
 dic = {i:0 for i in range(0,1001)}
 dic[0] = 0#''
 
@@ -69,4 +70,5 @@ for i in range(100,1000):
         dic[i]=dic[int(hundreds/100)]+7
     else:
         dic[i]=dic[int(hundreds/100)]+dic[tensones]+10
-print(sum(dic.values()),time.time()-t1)
+print(sum(dic.values()))
+print(f'Process completed in {time()-t1}s')
