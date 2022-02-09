@@ -4,7 +4,6 @@ from time import time
 t1=time()
 n=10000
 while p(n)%1_000_000!=0:
-    print(n)
     n+=1
 
 print(n)
