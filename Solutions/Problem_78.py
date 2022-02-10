@@ -1,5 +1,6 @@
 from sympy import partition as p
 from time import time
+from rich import print
 
 t1=time()
 n=10000
