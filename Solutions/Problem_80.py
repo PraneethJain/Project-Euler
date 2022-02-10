@@ -1,4 +1,3 @@
-from decimal import *
 from sympy import sqrt,evalf
 from fraction import square_check
 from rich import print
