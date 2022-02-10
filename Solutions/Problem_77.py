@@ -1,12 +1,13 @@
 from prime import factors,primecheck
 from time import time
+from rich import print
 
 
 def sum_prime(x: int) -> int:
     """Returns sum of prime factors of x"""
     return sum(i for i in factors(x) if primecheck(i))
 
-dic = {1:0}
+dic = {1:0}                 
 def r(n: int) -> int:
     """Returns number of prime partitions of n"""
     if n==1:
