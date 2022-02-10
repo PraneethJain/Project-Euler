@@ -1,4 +1,6 @@
 from time import time
+from rich import print
+from rich.progress import track
 
 f=[1,1,2,6,24,120,720,5040,40320,362880]
 def sum_fac(x):
@@ -7,7 +9,7 @@ def sum_fac(x):
 t1=time()
 ans=0
 dic={}
-for num in range(10**6):
+for num in track(range(10**6), description="[bold cyan]Processing[/bold cyan]"):
     L=[num]
     i=0
     while sum_fac(L[-1]) not in L:
