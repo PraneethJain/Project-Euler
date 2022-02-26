@@ -13,4 +13,4 @@ for a1 in range(0,201,1):
                                 if a1+a2+a5+a10+a20+a50+a100+a200==200:
                                     ans+=1
 print(ans)
-print(f'Process completed in {time()-t1}s') #what
+print(f'Process completed in {time()-t1}s')
