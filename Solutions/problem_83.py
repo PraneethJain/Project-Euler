@@ -18,7 +18,7 @@ path, _ = finder.find_path(start, end, grid)
 
 sum = 0
 for column, row in path:
-    sum += matrix[column][row]
+    sum += matrix[row][column]
 
 print(sum)
 print(f"Process completed in time {time()-t1}s")
