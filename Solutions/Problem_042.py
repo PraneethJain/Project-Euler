@@ -9,9 +9,7 @@ def word_value(word: str) -> int:
 
 
 t1 = time()
-with open(
-    r"files\p042_words.txt", "r"
-) as f:
+with open(r"files\p042_words.txt", "r") as f:
     file = f.read()
 file = file.replace('"', "")
 words = file.split(",")

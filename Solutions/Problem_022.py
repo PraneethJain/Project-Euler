@@ -1,9 +1,7 @@
 from time import time
 
 t1 = time()
-with open(
-    r"files\p022_names.txt", "r"
-) as file:
+with open(r"files\p022_names.txt", "r") as file:
     f = file.read()
 
 f = f.replace('"', "")
