@@ -4,7 +4,7 @@ from time import time
 
 
 def next(x):
-    return sum(int(i)**2 for i in str(x))
+    return sum(int(i) ** 2 for i in str(x))
 
 
 dic = {1: False, 89: True}

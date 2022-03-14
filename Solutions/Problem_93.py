@@ -13,7 +13,7 @@ operators = {"+", "-", "*", "/"}
 operator_combinations = list(combinations_with_replacement(operators, 3))
 
 dic = {}
-for digits in track(digits_combinations,"Processing"):
+for digits in track(digits_combinations, "Processing"):
     digit_permutations = list(permutations(digits))
 
     L = set()

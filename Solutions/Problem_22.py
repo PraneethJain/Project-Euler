@@ -1,13 +1,15 @@
 from time import time
 
 t1 = time()
-with open(r"C:\Users\prane\Documents\Stuff\Python\files_input\p022_names.txt","r") as file:
+with open(
+    r"C:\Users\prane\Documents\Stuff\Python\files_input\p022_names.txt", "r"
+) as file:
     f = file.read()
 
-f=f.replace('"','')
+f = f.replace('"', "")
 names = sorted(f.split(","))
 ans = 0
-for i in range(0,len(names)):
-    ans += (i+1)*sum(ord(j) - 64 for j in list(names[i]))
+for i in range(0, len(names)):
+    ans += (i + 1) * sum(ord(j) - 64 for j in list(names[i]))
 print(ans)
-print(f'Process completed in {time()-t1}s')
+print(f"Process completed in {time()-t1}s")
