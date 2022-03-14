@@ -2,7 +2,7 @@ from time import time
 
 
 t1 = time()
-with open(r"C:\Users\prane\Documents\Stuff\Python\Files_Input\p067_triangle.txt") as f:
+with open(r"files\p067_triangle.txt") as f:
     file = f.read().splitlines()
 L = []
 for ele in file:

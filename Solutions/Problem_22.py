@@ -2,7 +2,7 @@ from time import time
 
 t1 = time()
 with open(
-    r"C:\Users\prane\Documents\Stuff\Python\files_input\p022_names.txt", "r"
+    r"files\p022_names.txt", "r"
 ) as file:
     f = file.read()
 

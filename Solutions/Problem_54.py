@@ -132,7 +132,7 @@ def checkwin(h):
 
 
 t1 = time()
-with open(r"C:\Users\prane\Documents\Stuff\Python\Files_Input\p054_poker.txt") as f:
+with open(r"files\p054_poker.txt") as f:
     file = f.read()
 file = file.split("\n")
 file.pop()

@@ -10,7 +10,7 @@ def word_value(word: str) -> int:
 
 t1 = time()
 with open(
-    r"C:\Users\prane\Documents\Stuff\Python\Files_input\p042_words.txt", "r"
+    r"files\p042_words.txt", "r"
 ) as f:
     file = f.read()
 file = file.replace('"', "")

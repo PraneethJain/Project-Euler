@@ -3,7 +3,7 @@ from time import time
 
 
 t1 = time()
-with open(r"C:\Users\prane\Documents\Stuff\Python\Files_Input\p059_cipher.txt") as f:
+with open(r"files\p059_cipher.txt") as f:
     file = f.read()
 file = file.split(",")
 file = list(map(int, file))
