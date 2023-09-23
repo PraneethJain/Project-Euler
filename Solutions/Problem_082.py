@@ -14,7 +14,6 @@ for i in range(80):
 
 # Getting min columns from right to left
 for column in range(78, -1, -1):
-
     ans[0] += matrix[0][column]
 
     # Getting min by going down

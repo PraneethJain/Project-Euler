@@ -1,5 +1,6 @@
 from time import time
 
+
 # (3n^2-n)/2=P --> n=(1+sqrt(24p+1))/6
 def pentagonal_check(p: int) -> bool:
     n = (1 + (24 * p + 1) ** 0.5) / 6
