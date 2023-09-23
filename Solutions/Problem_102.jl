@@ -1,6 +1,6 @@
 using BenchmarkTools
 
-open("./Files/p102_triangles.txt") do f
+open("../files/p102_triangles.txt") do f
     global triangles = readlines(f)
 end
 

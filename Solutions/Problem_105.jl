@@ -19,7 +19,7 @@ function sum_check(A)
 end
 
 function main()
-    open("./Files/p105_sets.txt") do f
+    open("../files/p105_sets.txt") do f
         sets = readlines(f)
     end
     return sum([sum_check([parse(Int, ele) for ele in split(set, ',')]) for set in sets])
